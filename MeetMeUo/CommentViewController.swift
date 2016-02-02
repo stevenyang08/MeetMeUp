@@ -10,6 +10,7 @@ import UIKit
 
 class CommentViewController: UIViewController {
 
+    var meetUp = NSDictionary()
     override func viewDidLoad() {
         super.viewDidLoad()
 
