@@ -14,6 +14,8 @@
 		7B0BA9301C600BEF00596B69 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0BA92F1C600BEF00596B69 /* RootViewController.swift */; };
 		7B0BA9321C6017EE00596B69 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0BA9311C6017EE00596B69 /* DetailViewController.swift */; };
 		7B0BA9341C602FF900596B69 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0BA9331C602FF900596B69 /* CommentViewController.swift */; };
+		813DEEB21C603B6A00A460B2 /* DynamicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DEEB11C603B6A00A460B2 /* DynamicTableViewCell.swift */; };
+		813DEEB41C604C2500A460B2 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DEEB31C604C2500A460B2 /* MemberViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		7B0BA92F1C600BEF00596B69 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ../RootViewController.swift; sourceTree = "<group>"; };
 		7B0BA9311C6017EE00596B69 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7B0BA9331C602FF900596B69 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		813DEEB11C603B6A00A460B2 /* DynamicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicTableViewCell.swift; path = ../DynamicTableViewCell.swift; sourceTree = "<group>"; };
+		813DEEB31C604C2500A460B2 /* MemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		7B0BA90F1C600B7200596B69 = {
 			isa = PBXGroup;
 			children = (
+				813DEEB31C604C2500A460B2 /* MemberViewController.swift */,
 				7B0BA91A1C600B7200596B69 /* MeetMeUo */,
 				7B0BA9191C600B7200596B69 /* Products */,
 			);
@@ -62,6 +67,7 @@
 				7B0BA92F1C600BEF00596B69 /* RootViewController.swift */,
 				7B0BA9311C6017EE00596B69 /* DetailViewController.swift */,
 				7B0BA9331C602FF900596B69 /* CommentViewController.swift */,
+				813DEEB11C603B6A00A460B2 /* DynamicTableViewCell.swift */,
 				7B0BA91F1C600B7200596B69 /* Main.storyboard */,
 				7B0BA9221C600B7200596B69 /* Assets.xcassets */,
 				7B0BA9241C600B7200596B69 /* LaunchScreen.storyboard */,
@@ -141,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813DEEB41C604C2500A460B2 /* MemberViewController.swift in Sources */,
+				813DEEB21C603B6A00A460B2 /* DynamicTableViewCell.swift in Sources */,
 				7B0BA9341C602FF900596B69 /* CommentViewController.swift in Sources */,
 				7B0BA9321C6017EE00596B69 /* DetailViewController.swift in Sources */,
 				7B0BA9301C600BEF00596B69 /* RootViewController.swift in Sources */,
@@ -294,6 +302,7 @@
 				7B0BA92C1C600B7200596B69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

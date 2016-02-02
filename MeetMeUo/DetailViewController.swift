@@ -15,25 +15,23 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var meetUp = NSDictionary()
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
         navigationItem.title = meetUp.objectForKey("name") as? String
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell1")!
         var text : String
         switch indexPath.row{
             
         case 0:
-            cell = self.tableView.dequeueReusableCellWithIdentifier("Cell1")!
             let group = self.meetUp.objectForKey("group") as! NSDictionary
             text  = (group.objectForKey("name") as? String)!
             cell.textLabel?.text = String(text)
         case 1:
-            cell = self.tableView.dequeueReusableCellWithIdentifier("Cell1")!
             text = "RSVP Count: " + String(self.meetUp.objectForKey("yes_rsvp_count") as! Int)
             cell.textLabel?.text = String(text)
         case 2:
-            cell = self.tableView.dequeueReusableCellWithIdentifier("Cell2")!
             let htmlText = (self.meetUp.objectForKey("description") as? String)!
             var text : NSAttributedString
             do {
@@ -53,15 +51,20 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
-
-    @IBAction func onWebsiteTapped(sender: UIBarButtonItem) {
-        let url = NSURL(string: meetUp.objectForKey("event_url") as! String)
-        let sfvc = SFSafariViewController(URL: url!)
-        presentViewController(sfvc, animated: true, completion: nil)
+    
+    func configureTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 160.0
     }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destination = segue.destinationViewController as! CommentViewController
         destination.meetUp = self.meetUp
     }
     
+    @IBAction func onWebsiteTapped(sender: UIButton) {
+        let url = NSURL(string: meetUp.objectForKey("event_url") as! String)
+        let sfvc = SFSafariViewController(URL: url!)
+        presentViewController(sfvc, animated: true, completion: nil)
+    }
 }
